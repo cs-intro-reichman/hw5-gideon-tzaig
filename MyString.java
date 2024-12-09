@@ -25,7 +25,8 @@ public class MyString {
         System.out.println(insertRandomly('s', "cat"));
         System.out.println(insertRandomly('x', ""));
         System.out.println(insertRandomly('0', "h"));
-        System.out.println(subsetOf("runi","running"));
+        System.out.println(subsetOf("sap","space"));
+        System.out.println("sap in space -> " + MyString.subsetOf("sap", "space") + " (expected: true)");
         //// Put your other tests here.
     }
 
@@ -71,10 +72,10 @@ public class MyString {
             for (int j = 0; j < set.length(); j ++) {
                 if (set.charAt(j) == sub.charAt(i)) {
                     if (j == 0) {
-                        set = set.substring(j);
+                        set = set.substring(j+1);
                     }
                     else {
-                        set = set.substring(0, j - 1) + set.substring(j);
+                        set = set.substring(0, j) + set.substring(j+1);
                     }
                     counter += 1;
                     break;
