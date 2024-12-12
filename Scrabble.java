@@ -85,7 +85,8 @@ public class Scrabble {
 		score = score * attempt.length();
 		if (attempt.length() == HAND_SIZE) score += 50;
 		if (MyString.subsetOf("runi", attempt)) score += 1000;
-
+		if (score != 0) System.out.println(word + "earned " + score + " points. Score: " + score + " points");
+		
 		return score;
 	}
 
