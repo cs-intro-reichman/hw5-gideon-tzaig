@@ -138,7 +138,7 @@ public class Scrabble {
 			
 			else if (MyString.subsetOf(".", input) && input.length() == 1) break;
 
-			else System.out.println("Invalid input. Please try again.");
+			else System.out.println("Invalid word. Try again.");
 		}
 		if (n == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
