@@ -56,12 +56,12 @@ public class Scrabble {
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
 		//// 
-		String testedWord = word.toUpperCase();
+		String testedWord = word;
 
 		for (int i =0; i < DICTIONARY.length; i ++) {
 			String dictWord = DICTIONARY[i];
-			if (dictWord == null || dictWord.length() == 0) return false;
-			if (MyString.subsetOf(dictWord, testedWord) && MyString.subsetOf(testedWord, dictWord)) return true;
+			if (dictWord == null || dictWord.length() == 0) continue;
+			if (MyString.subsetOf(dictWord.toLowerCase(), testedWord) && MyString.subsetOf(testedWord, dictWord.toLowerCase())) return true;
 		}
 
 		return false;
@@ -171,7 +171,7 @@ public class Scrabble {
 		//testBuildingTheDictionary();  
 		//testScrabbleScore();    
 		//testCreateHands();  
-		//testPlayHands();
+		testPlayHands();
 		//playGame();
 	}
 
@@ -200,6 +200,6 @@ public class Scrabble {
 		init();
 		//playHand("ocostrza");
 		//playHand("arbffip");
-		//playHand("aretiin");
+		playHand("aretiin");
 	}
 }
