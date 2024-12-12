@@ -131,7 +131,7 @@ public class Scrabble {
 				score = Scrabble.wordScore(input);
 
 				// Print points
-				if (score != 0) System.out.println(input + " earned " + score + " points. Score: " + score + " points");
+				if (score != 0) System.out.println(input + " earned " + score + " points. Score: " + score + " points\n");
 
 				// Return to another try or finish game
 			}
