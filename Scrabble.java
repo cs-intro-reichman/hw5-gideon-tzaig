@@ -165,7 +165,7 @@ public class Scrabble {
 			//
 			if (MyString.subsetOf("n", input) && input.length() == 1) Scrabble.playHand(Scrabble.createHand());
 			else if (MyString.subsetOf("e", input) && input.length() == 1) break;
-			else System.out.println("Invalid input. Please try again.");
+			else System.out.println("Invalid word. Try again.");
 		}
 	}
 
